@@ -3,10 +3,10 @@ window.onload = function() {
 	setInterval(passarSlide, 2000);
 
 	var slidewidth = document.getElementById("slideshow").offsetWidth;
-	var objs = document.getElementsByClassName("slide");
-	for(var i in objs) {
-		objs[i].style.width = slidewidth;
-	}
+	var objs = document.querySelectorAll(".slide");
+	objs.forEach(obj => {
+		obj.style.width = slidewidth;
+	});
 }
 function passarSlide() {
 	var slidewidth = document.getElementById("slideshow").offsetWidth;
